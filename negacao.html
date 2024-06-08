@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <p>voce tem certeza que quer desistir?</p>
+        <div class="buttons-container">
+            <button>
+                <a href="./index.html">Não</a>
+            </button>
+            <button id="no">Sim</button>
+        </div>
+    </div>
+
+</body>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: red;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210101/pngtree-valentines-day-red-hearts-background-image_523161.jpg);
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .box {
+        font-size: 20px;
+        color: red;
+        height: 250px;
+        width: 350px;
+        border-radius: 10px;
+        background: #191919;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        width: 150px;
+    }
+    
+    .button {
+        height: 30px;
+        width: 50px;
+        background: whitesmoke;
+        border-radius: 10px;
+        color: blue;
+        font-weight: 600;
+    }
+</style>
+<script>
+    let button = document.getElementById('no');
+    let height = window.innerHeight - 50;
+    let width = window.innerWidth - 50;
+
+    button.addEventListener('mouseover', function() {
+        button.style.position = "absolute";
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+
+    })
+</script>
+
+</html>
